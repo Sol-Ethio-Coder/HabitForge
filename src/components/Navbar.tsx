@@ -49,13 +49,13 @@ export default function Navbar() {
 
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden w-10 h-10 grid place-items-center rounded-lg glass"
+          className="md:hidden w-10 h-10 grid place-items-center rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition"
           aria-label="Menu"
         >
           <div className="flex flex-col gap-1.5">
-            <span className={`block w-5 h-0.5 bg-white transition ${open ? "rotate-45 translate-y-2" : ""}`} />
-            <span className={`block w-5 h-0.5 bg-white transition ${open ? "opacity-0" : ""}`} />
-            <span className={`block w-5 h-0.5 bg-white transition ${open ? "-rotate-45 -translate-y-2" : ""}`} />
+            <span className={`block w-5 h-0.5 bg-white/80 transition ${open ? "rotate-45 translate-y-2" : ""}`} />
+            <span className={`block w-5 h-0.5 bg-white/80 transition ${open ? "opacity-0" : ""}`} />
+            <span className={`block w-5 h-0.5 bg-white/80 transition ${open ? "-rotate-45 -translate-y-2" : ""}`} />
           </div>
         </button>
       </div>
