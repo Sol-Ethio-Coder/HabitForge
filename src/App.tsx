@@ -4,9 +4,11 @@ import Hero from "./components/Hero";
 import TipsSection from "./components/TipsSection";
 import LawsSection from "./components/LawsSection";
 import Tracker from "./components/Tracker";
+import FocusTimer from "./components/FocusTimer";
+import BurnHabit from "./components/BurnHabit";
 import QuotesSection from "./components/QuotesSection";
 import Footer from "./components/Footer";
-import { buildTips, breakTips } from "./data";
+import { buildTips, breakTips, relationshipTips, recoveryTips } from "./data";
 import { useReveal } from "./components/useReveal";
 
 export default function App() {
@@ -17,6 +19,10 @@ export default function App() {
       <Background />
       <Navbar />
       <Hero />
+
+      <Tracker />
+      <FocusTimer />
+      <BurnHabit />
 
       <TipsSection
         id="build"
@@ -33,11 +39,28 @@ export default function App() {
         title="Cut the chains that hold you back"
         subtitle="Practical techniques to escape unwanted patterns and reclaim your time, energy, and self-respect."
         tips={breakTips}
-        accent="from-rose-500 to-red-600"
+        accent="from-orange-500 to-red-600"
+      />
+
+      <TipsSection
+        id="relationships"
+        eyebrow="Connection Habits"
+        title="Foster Deep Relationships"
+        subtitle="Strong relationships don't just happen. They are built through intentional, daily habits of connection and empathy."
+        tips={relationshipTips}
+        accent="from-pink-500 to-rose-600"
+      />
+
+      <TipsSection
+        id="recovery"
+        eyebrow="Dopamine Recovery"
+        title="Overcome Compulsions"
+        subtitle="Tactics to break free from high-dopamine habits like pornography, regain mental clarity, and reclaim your natural drive."
+        tips={recoveryTips}
+        accent="from-blue-500 to-indigo-600"
       />
 
       <LawsSection />
-      <Tracker />
       <QuotesSection />
       <Footer />
     </div>
